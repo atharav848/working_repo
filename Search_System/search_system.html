@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .multiple_boxess .boxx {
+      background-color: purple;
+      min-width: 350px;
+      height: 350px;
+      border-radius: 1rem;
+      color: white;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .multiple_boxess {
+      margin-top: 6.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* input box */
+    .input_box {
+      display: flex;
+      justify-content: center;
+    }
+
+    #search {
+      width: 50%;
+      padding: 0.6rem;
+      margin-top: 3rem;
+      border-radius: 6px;
+    }
+
+    .boxx span {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="input_box">
+    <input type="text" id="search" placeholder="Please Choose your language to Codee.." />
+  </div>
+  <div class="multiple_boxess">
+    <div class="boxx"><span class="text">HTML </span></div>
+    <div class="boxx"><span class="text">CSS </span></div>
+    <div class="boxx"><span class="text">JAVA </span></div>
+    <div class="boxx"><span class="text">C++ </span></div>
+    <div class="boxx"><span class="text">Python </span></div>
+    <div class="boxx"><span class="text">Rubby </span></div>
+    <div class="boxx"><span class="text">Numpy </span></div>
+    <div class="boxx"><span class="text">C language </span></div>
+    <div class="boxx"><span class="text">JavaScript </span></div>
+    <div class="boxx"><span class="text">R language </span></div>
+    <div class="boxx"><span class="text">My SQL </span></div>
+    <div class="boxx"><span class="text">Advance Java </span></div>
+    <div class="boxx"><span class="text">Advance PHP </span></div>
+    <div class="boxx"><span class="text">Node.js </span></div>
+    <div class="boxx"><span class="text">React </span></div>
+    <div class="boxx"><span class="text">PHP </span></div>
+    <div class="boxx"><span class="text">Atharvv Raut.. </span></div>
+  </div>
+  <script>
+    const searchInput = document.getElementById("search");
+    const texts = document.querySelectorAll(".text");
+
+    searchInput.addEventListener("input", function () {
+      let filter = searchInput.value.toUpperCase().trim();
+
+      texts.forEach(function (span) {
+        let spanText = span.innerText.toUpperCase();
+        let box = span.closest(".boxx"); // parent box // span ek text hain or usaka jo parent hota hain boxx use acesse karta hain closest . chahe kitana bhi nested ho bas jaha se boxx shuru hota hain usaki id dedo
+
+        if (spanText.includes(filter)) {
+          box.style.display = "";
+        } else {
+          box.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
