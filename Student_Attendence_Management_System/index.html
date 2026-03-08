@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <p class="ntext">📚 Student Attendance Management System</p>
+    </div>
+
+    <div class="menu">
+      <!-- attendence_card1 -->
+      <div class="manage">
+        <div class="attendence_card1">
+          <p class="card1_lable">Add New Student</p>
+          <div class="student_info">
+            <input
+              type="text"
+              id="Student_name"
+              placeholder="Enter Student Name.."
+            />
+            <button class="Add_Student">Add Student</button>
+          </div>
+          <button class="Refresh_Student" onclick="Refresh()">
+            🔄️ Refresh Student
+          </button>
+        </div>
+        <!-- attendence_card2 -->
+        <div class="attendence_card2">
+          <p class="card2_lable">Mark Attendance</p>
+          <table id="Student_Table">
+            <thead>
+              <tr>
+                <th>Roll_No</th>
+                <th>Name</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="Table_Body"></tbody>
+          </table>
+          <button id="Save_Attendence">💾 Save Attendance</button>
+        </div>
+        <!-- attendence_card3 -->
+        <div class="attendence_card3">
+          <div class="summary">
+            <p class="summary_lable">Attendance Summary</p>
+            <p>Total Students: <span id="total">0</span></p>
+            <p>Present: <span id="present">0</span></p>
+            <p>Absent: <span id="absent">0</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        © 2025 Student Attendance System | Designed with ❤️ by You
+      </div>
+    </footer>
+
+    <!-- script link -->
+    <script src="index.js"></script>
+  </body>
+</html>
